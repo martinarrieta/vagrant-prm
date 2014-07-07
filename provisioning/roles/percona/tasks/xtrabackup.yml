@@ -1,0 +1,2 @@
+- name: Installing percona-xtrabackup
+  yum: pkg=percona-xtrabackup state=latest

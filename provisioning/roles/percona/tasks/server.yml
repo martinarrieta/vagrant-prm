@@ -1,0 +1,2 @@
+- name: Installing percona-server
+  yum: pkg=Percona-Server-server-{{percona_server}} state=latest

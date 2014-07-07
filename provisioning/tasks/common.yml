@@ -1,0 +1,14 @@
+- name: Disabling the fastestmirror yum plugin.
+  template: src=templates/etc/yum/pluginconf.d/fastestmirror.conf dest=/etc/yum/pluginconf.d/fastestmirror.conf
+
+- name: Stopping iptables
+  service: name=iptables state=stopped enabled=no
+  
+- name: Adding the /etc/hosts file.
+  template: src=etc/hosts.t dest=/etc/hosts
+  
+- name: Installing wget
+  yum: name=wget state=latest
+
+- name: Installing vim-enhanced
+  yum: name=vim-enhanced state=latest

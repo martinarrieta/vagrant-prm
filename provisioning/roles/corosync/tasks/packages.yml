@@ -1,0 +1,6 @@
+- name: Installing corosync
+  yum: pkg=corosync state=latest
+
+- name: Installing pacemaker
+  yum: pkg=pacemaker state=latest
+  

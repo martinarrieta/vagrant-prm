@@ -1,0 +1,2 @@
+- name: Installing percona-toolkit
+  yum: pkg=percona-toolkit state=latest

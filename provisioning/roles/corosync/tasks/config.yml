@@ -1,0 +1,14 @@
+  
+- name: Adding the /etc/corosync/corosync.conf file.
+  template: src=corosync.conf dest=/etc/corosync/corosync.conf
+
+- name: Adding the /etc/corosync/authkey file.
+  copy: src=authkey dest=/etc/corosync/authkey mode=0400 owner=root
+  
+- name: Adding the /etc/corosync/service.d/ directory if not exists
+  file: path=/etc/corosync/service.d state=directory
+
+- name: Adding the /etc/corosync/service.d/pacemaker file.
+  template: src=pacemaker dest=/etc/corosync/service.d/pacemaker
+  
+ 

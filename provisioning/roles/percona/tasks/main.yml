@@ -1,0 +1,10 @@
+- include: repository.yml
+
+- include: toolkit.yml
+  when: percona_toolkit is defined
+
+- include: server.yml
+  when: percona_server is defined
+
+- include: xtrabackup.yml
+  when: percona_xtrabackup is defined
